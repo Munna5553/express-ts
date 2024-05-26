@@ -1,9 +1,9 @@
 import { Request, Response } from "express";
-import { Users } from "@/models/users.model";
-import { apiError } from "@/utils/error.handler";
-import { asyncHandler } from "@/utils/async.handler";
-import { apiRes } from "@/utils/res.handler";
-import { usertype } from "@/types/user.type";
+import { Users } from "../models/users.model";
+import { apiError } from "../utils/error.handler";
+import { asyncHandler } from "../utils/async.handler";
+import { apiRes } from "../utils/res.handler";
+import { usertype } from "../types/user.type";
 import crypto from "crypto";
 
 const register = asyncHandler(async (req: Request, res: Response) => {
