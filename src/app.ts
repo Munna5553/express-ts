@@ -17,4 +17,10 @@ app.use(cors({
 app.use(morgan("dev"));
 
 
+// all routes
+import userRouter from "routes/user.routes";
+
+app.use("/api/user", userRouter);
+
+
 export { app };
