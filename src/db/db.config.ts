@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 export const dbConnect = async () => {
     try {
-        await mongoose.connect(process.env.MONGODB_URI!);
+        await mongoose.connect(process.env.MONGODB_URI!, { dbName: "techbyte" });
 
         const connection = mongoose.connection;
         connection.on("connected", () => {
